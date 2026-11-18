@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "model_status": "Illustrative preliminary sizing; hardware assumptions unvalidated",
+  "assumptions": {
+    "MISSION_NAME": "Earth-Observation Satellite Design Study",
+    "TARGET_MASS_KG": 150.0,
+    "ORBIT_ALTITUDE_KM": 550.0,
+    "DESIGN_LIFE_YEARS": 3,
+    "MASS_CONTINGENCY_FRACTION": 0.2,
+    "PROPELLANT_MASS_KG": 8.0,
+    "POWER_CONTINGENCY_FRACTION": 0.2,
+    "SUNLIGHT_MIN": 60.03839,
+    "ECLIPSE_MIN": 35.61149,
+    "DISCHARGE_PATH_EFFICIENCY": 0.9,
+    "MAX_DEPTH_OF_DISCHARGE": 0.3,
+    "END_OF_LIFE_CAPACITY_FRACTION": 0.8,
+    "CHARGE_PATH_EFFICIENCY": 0.9,
+    "ARRAY_TO_BUS_EFFICIENCY": 0.9,
+    "SOLAR_IRRADIANCE_W_M2": 1361.0,
+    "CELL_EFFICIENCY": 0.3,
+    "CELL_COVERAGE_FRACTION": 0.9,
+    "TEMPERATURE_FACTOR": 0.9,
+    "ARRAY_END_OF_LIFE_FACTOR": 0.8,
+    "SUN_INCIDENCE_ANGLE_DEG": 25.0,
+    "BATTERY_PACK_SPECIFIC_ENERGY_WH_KG": 100.0,
+    "PANEL_AREAL_MASS_KG_M2": 5.0,
+    "OTHER_EPS_MASS_KG": 6.0,
+    "subsystem_masses_kg": {
+      "Payload": 20.0,
+      "Structure and mechanisms": 25.0,
+      "Attitude determination and control": 12.0,
+      "Electrical power system": 22.0,
+      "Communications": 8.0,
+      "On-board computer": 5.0,
+      "Thermal control": 7.0,
+      "Propulsion hardware": 10.0,
+      "Harness": 6.0
+    },
+    "subsystem_power_w_and_orbit_duty": {
+      "Payload": [
+        80.0,
+        0.2
+      ],
+      "Attitude determination and control": [
+        25.0,
+        1.0
+      ],
+      "Communications": [
+        60.0,
+        0.15
+      ],
+      "On-board computer": [
+        15.0,
+        1.0
+      ],
+      "Thermal control": [
+        30.0,
+        0.4
+      ],
+      "Power-system housekeeping": [
+        5.0,
+        1.0
+      ]
+    },
+    "sunlight_duty_cycles": {
+      "Payload": 0.3186290638373214,
+      "Attitude determination and control": 1.0,
+      "Communications": 0.23897179787799105,
+      "On-board computer": 1.0,
+      "Thermal control": 0.05,
+      "Power-system housekeeping": 1.0
+    },
+    "eclipse_duty_cycles": {
+      "Payload": 0.0,
+      "Attitude determination and control": 1.0,
+      "Communications": 0.0,
+      "On-board computer": 1.0,
+      "Thermal control": 0.990074621982961,
+      "Power-system housekeeping": 1.0
+    }
+  },
+  "configurations": [
+    {
+      "name": "A: Baseline camera",
+      "payload_mass_kg": 20.0,
+      "payload_power_w": 80.0,
+      "sunlight_average_w": 86.32863297966517,
+      "eclipse_average_w": 74.70223865948883,
+      "orbit_average_w": 81.99999999999999,
+      "eclipse_energy_wh": 44.33763375,
+      "battery_capacity_wh": 246.32018749999997,
+      "battery_recharge_energy_wh": 65.68538333333332,
+      "array_output_w": 188.04193564965493,
+      "panel_area_m2": 0.7841959874078723,
+      "battery_mass_kg": 2.4632018749999998,
+      "panel_mass_kg": 3.9209799370393617,
+      "eps_mass_kg": 12.384181812039362,
+      "estimated_dry_mass_kg": 105.38418181203936,
+      "mass_contingency_kg": 21.076836362407875,
+      "wet_mass_kg": 134.46101817444722,
+      "mass_headroom_kg": 15.538981825552781,
+      "simultaneous_load_w": 258.0,
+      "mass_target_pass": true,
+      "subsystem_masses_kg": {
+        "Payload": 20.0,
+        "Structure and mechanisms": 25.0,
+        "Attitude determination and control": 12.0,
+        "Electrical power system": 12.384181812039362,
+        "Communications": 8.0,
+        "On-board computer": 5.0,
+        "Thermal control": 7.0,
+        "Propulsion hardware": 10.0,
+        "Harness": 6.0
+      }
+    },
+    {
+      "name": "B: Higher-demand camera",
+      "payload_mass_kg": 35.0,
+      "payload_power_w": 140.0,
+      "sunlight_average_w": 105.44637680990446,
+      "eclipse_average_w": 74.70223865948883,
+      "orbit_average_w": 93.99999999999999,
+      "eclipse_energy_wh": 44.33763375,
+      "battery_capacity_wh": 246.32018749999997,
+      "battery_recharge_energy_wh": 65.68538333333332,
+      "array_output_w": 213.53226075664065,
+      "panel_area_m2": 0.8904989277470053,
+      "battery_mass_kg": 2.4632018749999998,
+      "panel_mass_kg": 4.452494638735026,
+      "eps_mass_kg": 12.915696513735027,
+      "estimated_dry_mass_kg": 120.91569651373503,
+      "mass_contingency_kg": 24.18313930274701,
+      "wet_mass_kg": 153.09883581648202,
+      "mass_headroom_kg": -3.0988358164820227,
+      "simultaneous_load_w": 330.0,
+      "mass_target_pass": false,
+      "subsystem_masses_kg": {
+        "Payload": 35.0,
+        "Structure and mechanisms": 25.0,
+        "Attitude determination and control": 12.0,
+        "Electrical power system": 12.915696513735027,
+        "Communications": 8.0,
+        "On-board computer": 5.0,
+        "Thermal control": 7.0,
+        "Propulsion hardware": 10.0,
+        "Harness": 6.0
+      }
+    },
+    {
+      "name": "C: Reduced-mass camera",
+      "payload_mass_kg": 32.0,
+      "payload_power_w": 140.0,
+      "sunlight_average_w": 105.44637680990446,
+      "eclipse_average_w": 74.70223865948883,
+      "orbit_average_w": 93.99999999999999,
+      "eclipse_energy_wh": 44.33763375,
+      "battery_capacity_wh": 246.32018749999997,
+      "battery_recharge_energy_wh": 65.68538333333332,
+      "array_output_w": 213.53226075664065,
+      "panel_area_m2": 0.8904989277470053,
+      "battery_mass_kg": 2.4632018749999998,
+      "panel_mass_kg": 4.452494638735026,
+      "eps_mass_kg": 12.915696513735027,
+      "estimated_dry_mass_kg": 117.91569651373503,
+      "mass_contingency_kg": 23.583139302747007,
+      "wet_mass_kg": 149.49883581648203,
+      "mass_headroom_kg": 0.5011641835179717,
+      "simultaneous_load_w": 330.0,
+      "mass_target_pass": true,
+      "subsystem_masses_kg": {
+        "Payload": 32.0,
+        "Structure and mechanisms": 25.0,
+        "Attitude determination and control": 12.0,
+        "Electrical power system": 12.915696513735027,
+        "Communications": 8.0,
+        "On-board computer": 5.0,
+        "Thermal control": 7.0,
+        "Propulsion hardware": 10.0,
+        "Harness": 6.0
+      }
+    }
+  ],
+  "maximum_payload_mass_at_140_w_kg": 32.417636819598314
+}
